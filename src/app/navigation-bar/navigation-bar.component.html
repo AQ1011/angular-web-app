@@ -1,0 +1,29 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+    (closed)="events.push('close!')">
+        <mat-nav-list role="list" dense>
+            <mat-list-item role="listitem">
+                <mat-icon matListIcon>
+                    home
+                </mat-icon>
+                <span class="item-span">Home</span>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-icon matListIcon>
+                    explore
+                </mat-icon>
+                <span class="item-span">Explore</span>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-icon matListIcon>
+                    subscriptions
+                </mat-icon>
+                <span class="item-span">Subscriptions</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-nav-list>      
+    </mat-sidenav>
+    <mat-sidenav-content>
+        Hello
+    </mat-sidenav-content>
+</mat-sidenav-container>
