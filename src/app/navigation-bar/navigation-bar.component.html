@@ -6,24 +6,26 @@
                 <mat-icon matListIcon>
                     home
                 </mat-icon>
-                <span class="item-span">Home</span>
+                <span *ngIf="showFiller" class="item-span">Home</span>
             </mat-list-item>
             <mat-list-item role="listitem">
                 <mat-icon matListIcon>
                     explore
                 </mat-icon>
-                <span class="item-span">Explore</span>
+                <span *ngIf="showFiller" class="item-span">Explore</span>
             </mat-list-item>
             <mat-list-item role="listitem">
                 <mat-icon matListIcon>
                     subscriptions
                 </mat-icon>
-                <span class="item-span">Subscriptions</span>
+                <span *ngIf="showFiller" class="item-span">Subscriptions</span>
             </mat-list-item>
             <mat-divider></mat-divider>
         </mat-nav-list>      
     </mat-sidenav>
     <mat-sidenav-content>
-        Hello
+        <div class="post-container">
+            <app-post *ngFor="let p of posts" [post]="p.data"></app-post>
+        </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

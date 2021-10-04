@@ -30,13 +30,20 @@ $my-theme: mat.define-light-theme((
     height: 100%
 
 }
-.mat-nav-list {
-    width: 15vw;
-}
+// .mat-nav-list {
+//     width: 15vw;
+// }
 .mat-list-item {
     font-size: 1.2em;
 }
 .item-span {
-    margin-left: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     font-size: 1.2em;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }

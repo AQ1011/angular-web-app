@@ -1,0 +1,19 @@
+.post {
+    width: 35vw;
+    margin: 1em auto;
+    background: white;
+    padding: 1em;
+    border: 1px solid hsl(0, 0, 70);
+    border-radius: 0.5em;
+}
+    .post-author {
+        color: red;
+        font-size: 0.8em;
+    }
+    .post-content {
+        font-size: 1.2em;
+    }
+a {
+    text-decoration: none;
+    color: black
+}

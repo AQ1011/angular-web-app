@@ -13,18 +13,28 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';  
 import {MatListModule} from '@angular/material/list'; 
 import {MatDividerModule} from '@angular/material/divider';
-import { HeaderComponent } from './components/header/header.component'; 
+import { HeaderComponent } from './components/header/header.component';
+import { GeneratedNavComponent } from './generated-nav/generated-nav.component';
+import { LayoutModule } from '@angular/cdk/layout'; 
+import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './components/post/post.component';
+import { LoginComponent } from './components/login/login.component'; 
+import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
-    HeaderComponent
+    HeaderComponent,
+    GeneratedNavComponent,
+    PostComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -32,9 +42,13 @@ import { HeaderComponent } from './components/header/header.component';
     MatGridListModule,
     MatSidenavModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    LayoutModule,
+    MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
